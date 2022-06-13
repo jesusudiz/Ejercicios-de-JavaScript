@@ -1,4 +1,3 @@
-
 // EJERCICIO 2
 // Secuencia inventada: f(n) = (f(n-1) + f(n-2) + f(n-3)) x 2
 // Donde las primeras tres posiciones son dadas por el array recibido por parametro y a partir de
@@ -18,22 +17,22 @@
 // Para números negativos de n debe devolver false
 
 
-function secuencia(x,n){
+function secuencia(x, n) {
 
-    for (let i= 0;i < x.length; i++){
-    if(typeof x[i]=="string"){
-     x[i]=x[i].length 
-      } 
-     }
-      
-      if(n < 0) return false;
-      if (n === 0) return x[0];
-      if (n === 1) return x[1];
-      if (n === 2) return x[2];
-  
-    for(let i= 3;i <= n;i++){
-      x[i]=((x[i-1]+x[i-2]+x[i-3])*2);
+  for (let i = 0; i < x.length; i++) {
+    if (typeof x[i] == "string") {
+      x[i] = x[i].length
     }
-    return x[n]
   }
-  console.log(secuencia( ["Franco", 1, "Henry"],5))
+
+  if (n < 0) return false;
+  if (n === 0) return x[0];
+  if (n === 1) return x[1];
+  if (n === 2) return x[2];
+
+  for (let i = 3; i <= n; i++) {
+    x[i] = ((x[i - 1] + x[i - 2] + x[i - 3]) * 2);
+  }
+  return x[n]
+}
+console.log(secuencia(["Franco", 1, "Henry"], 5))
